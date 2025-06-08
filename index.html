@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Constantinos Harkos, PhD</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("AnT9xPnnDEXXHwmy6");
+    })();
+  </script>
+  <style>
+    :root {
+      --primary-color: rgb(7, 120, 157);
+      --text-color: #fff;
+      --background-color: #f4f4f4;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: #333;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 1rem auto;
+      display: block;
+      border: 4px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      padding: 2rem 4vw;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 100%;
+      margin: 2rem auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .contact-form button:hover {
+      background-color: rgb(5, 100, 130);
+    }
+
+    .contact-icons {
+      margin-top: 0.5rem;
+    }
+
+    .contact-icons a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: white;
+      font-size: 1.4rem;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+    }
+
+    .contact-icons a:hover {
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    /* Tab Styles */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #ccc;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+
+    .tabs button {
+      background: none;
+      border: none;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-bottom: 3px solid transparent;
+      color: var(--primary-color);
+      font-size: 1rem;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .tabs button.active {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    /* Tab Content Animation */
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Skill Bars */
+    .skill-bar {
+      margin: 0.5rem 0;
+    }
+
+    .skill-bar span {
+      display: inline-block;
+      min-width: 180px;
+      font-weight: bold;
+    }
+
+    .skill-bar .level {
+      display: inline-block;
+      background: #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 10px;
+      width: 200px;
+      vertical-align: middle;
+    }
+
+    .skill-bar .level div {
+      background: var(--primary-color);
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Constantinos Harkos, PhD</h1>
+      <img src="static/Constantinos_Harkos.jpeg" alt="My Photo" class="profile-pic" />
+      <p>Postdoctoral Researcher at the University of Cyprus.</p>
+      <div class="contact-icons">
+        <a href="mailto:koshar@windowslive.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://orcid.org/0000-0003-0261-1289" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+        <a href="https://www.linkedin.com/in/constantinos-harkos-7a176125b" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </header>
+
+    <main>
+      <div id="flashMessage" class="flash-message" style="display:none;"></div>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="about">Short Bio</button>
+        <button class="tab-button" data-tab="experience">Experience</button>
+        <button class="tab-button" data-tab="education">Education</button>
+        <button class="tab-button" data-tab="publications">Publications</button>
+        <button class="tab-button" data-tab="skills">Software & Programming</button>
+        <button class="tab-button" data-tab="contact">Contact</button>
+      </div>
+
+      <section id="about" class="tab-content active">
+        <h2>Short Bio</h2>
+        <p>I received a B.Sc. in Mechanical Engineering from the Department of Mechanical Engineering at the University of Cyprus in 2019. That same year, I joined the Cancer Biophysics Laboratory at the University of Cyprus as a PhD student. In 2024, I completed my PhD and continued as a postdoctoral fellow. My work focuses on creating mathematical models for oncology applications. To achieve this, I use principles of solid, fluid mechanics, and systems biology. I combine numerical methods (e.g. Finite Element Method) and optimization algorithms. I also improve the accuracy of my models with the use of Magnetic Resonance Images (e.g. MRI, DTI MRI, MRE). My goal is to improve the efficacy of chemotherapy and immunotherapy in solid tumors by making predictions about the outcome of treatment.</p>
+      </section>
+
+      <section id="experience" class="tab-content">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Postdoctoral Researcher</strong>, University of Cyprus (Jun 2024–Present), Nicosia, Cyprus<br />Project: <em>European Research Council Consolidator Grant: Immuno-Predictor – Mechanical Biomarkers for Cancer Immunotherapy Prediction</em><br />• Creating Mathematical Models for Oncology Applications<br />• Data Processing and Visualization</li>
+          <li><strong>Special Scientist</strong>, University of Cyprus (Mar 2020–Jun 2024), Nicosia, Cyprus<br />Project: <em>European Research Council Consolidator Grant: Immuno-Predictor – Mechanical Biomarkers for Cancer Immunotherapy Prediction</em><br />• Creating Mathematical Models for Oncology Applications<br />• Data Processing and Visualization</li>
+          <li><strong>Teaching Assistant</strong>, University of Cyprus (Sep 2019–Jun 2022), Nicosia, Cyprus<br />Courses: Vector Mechanics for Engineers (Dynamics), Solid Mechanics, Fluid Mechanics</li>
+          <li><strong>Intern</strong>, Texas A&M University (Summer 2018), Texas, USA<br />Project: Membrane Distillation for Clean Water Production and Electrospinning for Membrane Fabrication</li>
+        </ul>
+      </section>
+
+      <section id="education" class="tab-content">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>PhD in Mechanical and Manufacturing Engineering</strong>, University of Cyprus (2019–2024), Nicosia, Cyprus – Focus: Mathematical Modeling and Systems Biology Applications in Oncology</li>
+          <li><strong>Completed MSc Coursework in Mechanical and Manufacturing Engineering</strong>, University of Cyprus (2019–2021), GPA: 9.28/10, Nicosia, Cyprus</li>
+          <li><strong>BSc in Mechanical and Manufacturing Engineering</strong>, University of Cyprus (2015–2019), GPA: 8.9/10, Nicosia, Cyprus</li>
+          <li><strong>Military Service</strong>, Cyprus National Guard (2013–2015), Nicosia, Cyprus</li>
+          <li><strong>High School Education</strong>, GPA: 19.58/20 (2010–2013), Nicosia, Cyprus</li>
+        </ul>
+      </section>
+
+      <section id="publications" class="tab-content">
+        <h2>Publications</h2>
+        <ul>
+          <li><strong>"Using mathematical modelling and AI to improve delivery and efficacy of therapies in cancer"</strong>, Harkos C., Hadjigeorgiou G.A., Voutouri C., Kumar A.S., Stylianopoulos T., and Jain R.K. <em>Nature Reviews Cancer</em>, 2025 – <a href="https://doi.org/10.1038/s41568-025-00796-w" target="_blank">Publication URL</a></li>
+          <li><strong>"Mathematical Modeling and Association Analysis Deciphers the Impact of the Gut Microbiome on Cancer Immunotherapy"</strong>, Hadjigeorgiou A.G., Harkos C., Mishra A.K., Morad G., Johnson S.B., Ajami N.J., Wargo J.A., Munn L.L., Stylianopoulos T., Jain R.K. <em>Cancer Research</em>, 2025 – <a href="https://aacrjournals.org/cancerres/article/doi/10.1158/0008-5472.CAN-24-2232/762766/Mathematical-Modeling-and-Association-Analysis" target="_blank">Publication URL</a></li>
+          <li><strong>"Investigating synergistic effects of immunotherapy and normalization"</strong>, Harkos C., and Stylianopoulos T. <em>Journal of Theoretical Biology</em>, 2024 – <a href="https://doi.org/10.1016/j.jtbi.2024.111768" target="_blank">Publication URL</a></li>
+          <li><strong>"Mathematical modeling of intratumoral immunotherapy"</strong>, Harkos C., Stylianopoulos T., and Jain R.K. <em>PLoS Computational Biology</em>, 2023 – <a href="https://doi.org/10.1371/journal.pcbi.1011740" target="_blank">Publication URL</a></li>
+          <li><strong>"Biomechanical heterogeneity in brain tumor modeling"</strong>, Harkos C., Svensson S.F., Emblem K.E., Stylianopoulos T. <em>Cancers</em>, 2022 – <a href="https://doi.org/10.3390/cancers14040884" target="_blank">Publication URL</a></li>
+        </ul>
+      </section>
+
+      <section id="skills" class="tab-content">
+        <h2>Software & Programming</h2>
+        <div class="skill-bar"><span>Matlab</span><div class="level"><div style="width:100%"></div></div></div>
+        <div class="skill-bar"><span>Comsol</span><div class="level"><div style="width:100%"></div></div></div>
+        <div class="skill-bar"><span>Office</span><div class="level"><div style="width:100%"></div></div></div>
+        <div class="skill-bar"><span>LaTeX</span><div class="level"><div style="width:100%"></div></div></div>
+        <div class="skill-bar"><span>Python</span><div class="level"><div style="width:90%"></div></div></div>
+        <div class="skill-bar"><span>Simpleware ScanIp</span><div class="level"><div style="width:80%"></div></div></div>
+        <div class="skill-bar"><span>Biorender</span><div class="level"><div style="width:80%"></div></div></div>
+        <div class="skill-bar"><span>Fortran</span><div class="level"><div style="width:60%"></div></div></div>
+        <div class="skill-bar"><span>Adobe Illustrator</span><div class="level"><div style="width:60%"></div></div></div>
+        <div class="skill-bar"><span>Inkscape</span><div class="level"><div style="width:60%"></div></div></div>
+        <div class="skill-bar"><span>Solidworks</span><div class="level"><div style="width:60%"></div></div></div>
+        <div class="skill-bar"><span>AutoCAD</span><div class="level"><div style="width:40%"></div></div></div>
+        <div class="skill-bar"><span>Html</span><div class="level"><div style="width:30%"></div></div></div>
+      </section>
+
+      <section id="contact" class="tab-content">
+        <h2>Contact Me</h2>
+        <form class="contact-form" id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Constantinos Harkos. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // First, remove active class and start fading out the previous content
+        buttons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(content => {
+          content.classList.remove('active');
+          content.style.opacity = 0; // Start fading out
+        });
+
+        // Activate the clicked tab and its content
+        button.classList.add('active');
+        const activeTab = document.getElementById(button.dataset.tab);
+        activeTab.classList.add('active');
+
+        // After a slight delay, apply the fade-in effect
+        setTimeout(() => {
+          activeTab.style.opacity = 1; // Fade-in effect
+        }, 50);  // Small delay to ensure content appears before fading in
+      });
+    });
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Handle contact form
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const flash = document.getElementById('flashMessage');
+      const form = this;
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+      };
+
+      emailjs.send("service_bh91f7n", "template_gmffe02", formData)
+        .then(function(response) {
+          flash.textContent = "Your message has been sent successfully!";
+          flash.style.display = "block";
+          flash.style.backgroundColor = "#d4edda";
+          form.reset();
+        }, function(error) {
+          flash.textContent = "Something went wrong. Please try again later.";
+          flash.style.display = "block";
+          flash.style.backgroundColor = "#f8d7da";
+        });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
